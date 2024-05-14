@@ -45,7 +45,10 @@ namespace seneca {
                 << std::setw(25) << m_orderDescription << "|"
                 << std::setw(12) << std::fixed << std::setprecision(2) << priceWithTax;
             if (m_isDailySpecial) {
-                std::cout << "|" << std::setw(13) << std::fixed << std::setprecision(2) << (priceWithTax - g_dailydiscount);
+                std::cout << "|" << std::setw(13) << std::right << std::setprecision(2) << (priceWithTax - g_dailydiscount);
+            }
+            else {
+                std::cout << "|";
             }
             std::cout << std::endl;
         }
